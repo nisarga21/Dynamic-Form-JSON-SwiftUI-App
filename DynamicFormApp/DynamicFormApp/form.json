@@ -1,0 +1,66 @@
+{
+    "theme": {
+        "background_color": "#F5F5F5",
+        "text_color": "#1A1A1A",
+        "border_color": "#E0E0E0",
+        "error_color": "#D32F2F"
+    },
+    "form_title": "Sample Dynamic Form",
+    "fields": [
+        {
+            "id": "name",
+            "order": 1,
+            "type": "TEXT",
+            "required": true,
+            "placeholder": "Full name",
+            "max_length": 50,
+            "error_message": "Please enter your full name"
+        },
+        {
+            "id": "age",
+            "order": 2,
+            "type": "TEXT",
+            "required": true,
+            "placeholder": "Age",
+            "subtype": "NUMBER",
+            "error_message": "Enter a valid age"
+        },
+        {
+            "id": "country",
+            "order": 3,
+            "type": "DROPDOWN",
+            "required": true,
+            "allow_multiple": false,
+            "options": [
+                {"id": "us", "label": "United States"},
+                {"id": "ca", "label": "Canada"},
+                {"id": "uk", "label": "United Kingdom"}
+            ],
+            "default_values": ["us"]
+        },
+        {
+            "id": "interests",
+            "order": 4,
+            "type": "DROPDOWN",
+            "required": false,
+            "allow_multiple": true,
+            "options": [
+                {"id": "tech", "label": "Technology"},
+                {"id": "sports", "label": "Sports"},
+                {"id": "music", "label": "Music"}
+            ]
+        },
+        {
+            "id": "terms",
+            "order": 5,
+            "type": "CHECKBOX",
+            "required": true,
+            "label": "I agree to the Terms and Conditions and Privacy Policy",
+            "metadata": {
+                "Terms and Conditions": "https://example.com/terms",
+                "Privacy Policy": "https://example.com/privacy"
+            },
+            "clickable_text_color": "#1976D2"
+        }
+    ]
+}
